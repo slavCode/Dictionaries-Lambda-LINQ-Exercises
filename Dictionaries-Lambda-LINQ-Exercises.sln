@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook", "Phonebook\Phon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookUpgrade", "PhonebookUpgrade\PhonebookUpgrade.csproj", "{5E68F7F3-E83F-43F4-A72C-97D29331F95D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMinerTask", "AMinerTask\AMinerTask.csproj", "{CDDC4082-AE8A-4757-8683-7F584D1CE494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5E68F7F3-E83F-43F4-A72C-97D29331F95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E68F7F3-E83F-43F4-A72C-97D29331F95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E68F7F3-E83F-43F4-A72C-97D29331F95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
