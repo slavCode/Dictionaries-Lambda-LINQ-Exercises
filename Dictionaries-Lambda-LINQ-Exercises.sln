@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookUpgrade", "Phonebo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMinerTask", "AMinerTask\AMinerTask.csproj", "{CDDC4082-AE8A-4757-8683-7F584D1CE494}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixEmails", "FixEmails\FixEmails.csproj", "{766CC072-DA4D-495E-BA54-0A5A072D6D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOfCards", "HandsOfCards\HandsOfCards.csproj", "{59AD9E23-9BB4-4F1C-AAF5-F51EDFB859DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDDC4082-AE8A-4757-8683-7F584D1CE494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766CC072-DA4D-495E-BA54-0A5A072D6D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766CC072-DA4D-495E-BA54-0A5A072D6D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766CC072-DA4D-495E-BA54-0A5A072D6D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766CC072-DA4D-495E-BA54-0A5A072D6D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59AD9E23-9BB4-4F1C-AAF5-F51EDFB859DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59AD9E23-9BB4-4F1C-AAF5-F51EDFB859DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59AD9E23-9BB4-4F1C-AAF5-F51EDFB859DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59AD9E23-9BB4-4F1C-AAF5-F51EDFB859DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
