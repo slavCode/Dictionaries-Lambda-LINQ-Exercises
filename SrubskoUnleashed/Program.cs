@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SrubskoUnleashed
 {
@@ -10,46 +8,59 @@ namespace SrubskoUnleashed
     {
         static void Main()
         {
-            var input = Console.ReadLine().Split('@').ToArray();
-            var name = input[0];
-            var singers = new Dictionary<string, Dictionary<string, int>>();
 
-            while (name != "end")
+            //40|100
+            var input = Console.ReadLine().Split(new string[] { "@" }, StringSplitOptions.RemoveEmptyEntries).Select(e => e.Trim()).ToArray();
+            var singerName = input[0];
+            var events = new Dictionary<string, Dictionary<string, int>>();
+
+            while (singerName != "End")
             {
-                var venuePriceAndCounts = input[2].Split().ToArray();
-                int ticketPrice = 0;
-                bool ticketIsNumber = int.TryParse(
-                    venuePriceAndCounts[venuePriceAndCounts.Length - 2],
-                    out ticketPrice);
-                if (venuePriceAndCounts.Length > 2 && ticketIsNumber)
+                var venues = input[1].Split().ToList();
+                int ticketsCount = 0;
+                int ticketsPrice = 0;
+                bool countIsNumber = int.TryParse(
+                    venues[venues.Count - 1],
+                    out ticketsCount);
+                bool priceIsNumber = int.TryParse(
+                    venues[venues.Count - 2],
+                    out ticketsPrice);
+                
+
+                if (venues.Count > 2 && priceIsNumber && countIsNumber)
                 {
-                    if (!singers.ContainsKey(name))
+                    string venueName = String.Join(" ", venues.Take(venues.Count - 2));
+                    ticketsCount = int.Parse(venues[venues.Count - 1]);
+                    ticketsPrice = int.Parse(venues[venues.Count - 2]);
+                    var totalMoney = ticketsCount * ticketsPrice;
+                    var singer = new Dictionary<string, int>();
+                    singer.Add(singerName, totalMoney);
+
+                    if (!events.ContainsKey(venueName))
                     {
-                        singers.Add(name, new Dictionary<string, int>());
+                        events.Add(venueName, singer);
                     }
                     else
                     {
-                        singers[name]
-                    }
-                    for (int i = 0; i < venuePriceAndCounts.Length; i++)
-                    {
-
+                        if (!events[venueName].ContainsKey(singerName))
+                        {
+                            events[venueName].Add(singerName, totalMoney);
+                        }
+                        else events[venueName][singerName] += totalMoney;
                     }
                 }
-                else
+                input = Console.ReadLine().Split(new string[] { "@" }, StringSplitOptions.RemoveEmptyEntries).Select(e => e.Trim()).ToArray();
+                singerName = input[0];
+            }
+            foreach (var happening in events)
+            {
+                Console.WriteLine($"{happening.Key}");
+                foreach (var singer in happening.Value
+                    .OrderByDescending(s => s.Value)
+                    .ThenBy(s => s.Key))
                 {
-
+                    Console.WriteLine($"#  {singer.Key} -> {singer.Value}");
                 }
-
-
-
-
-
-
-
-
-
-
             }
         }
     }
